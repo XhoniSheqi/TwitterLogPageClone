@@ -1,0 +1,169 @@
+/* reset css */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Cabin", sans-serif;
+  line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.txt--blue {
+  color: rgb(26, 140, 216);
+}
+
+/* main header */
+
+.main__header {
+  min-height: 100vh;
+}
+
+.main__header .row {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.main__header .row .col {
+  flex: 1 1 0%;
+}
+
+.main__header .row .col1 {
+  min-height: 100vh;
+  background: url(../assets/twitter__hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  position: relative;
+}
+
+.main__header .row .col1 .hero {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main__header .row .col2 .col2__content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 5rem;
+}
+
+.main__header .row .col2 .col2__content .logo img {
+  width: 10%;
+  height: auto;
+  object-fit: cover;
+}
+
+.main__header .row .col2 .main__col2-content h1 {
+  font-size: calc(6rem + 1.2vw);
+  padding-bottom: 2rem;
+}
+
+.main__header .row .col2 .main__col2-content h2 {
+  font-size: calc(1rem + 1.2vw);
+  padding-bottom: 2rem;
+}
+
+.main__header .row .col2 .main__col2-content .btn__groups {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__header .row .col2 .main__col2-content .btn__groups .btn {
+  width: 35%;
+  padding: 1rem 4rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 3rem;
+  margin-bottom: 2rem;
+
+  transition: 0.5s all;
+}
+
+.main__header
+  .row
+  .col2
+  .main__col2-content
+  .btn__groups
+  .btn:nth-last-of-type(2):hover {
+  background: rgb(195, 195, 195);
+}
+
+.main__header .row .col2 .main__col2-content .btn__groups .btn:last-child {
+  background: rgb(26, 140, 216);
+  color: #fff;
+  margin-top: 2rem;
+  border: none;
+}
+
+.main__header
+  .row
+  .col2
+  .main__col2-content
+  .btn__groups
+  .btn:last-child:hover {
+  background: rgb(25, 117, 179);
+}
+
+.main__header .row .col2 .main__col2-content p {
+  max-width: 40ch;
+  font-size: 1.2rem;
+}
+
+.main__header .row .col2 .log__content .btn {
+  display: inline-block;
+  width: 35%;
+  padding: 1rem 4rem;
+  border: 1px solid rgba(0, 0, 0, 0.205);
+  border-radius: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: rgb(26, 140, 216);
+  font-weight: bolder;
+
+  transition: 0.5s all;
+}
+
+@media screen and (max-width: 1024px) {
+  .main__header .row {
+    flex-direction: column-reverse;
+  }
+
+  .main__header .row .col2 .main__col2-content h1 {
+    font-size: calc(3rem + 1.2vw);
+    padding-bottom: 2rem;
+  }
+  .main__header .row .col2 .main__col2-content .btn__groups .btn {
+    width: 60%;
+    padding: 1rem 3rem;
+  }
+  .main__header .row .col1 {
+    min-height: 40vh;
+  }
+}
